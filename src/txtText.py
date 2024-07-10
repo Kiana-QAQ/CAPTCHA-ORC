@@ -12,13 +12,13 @@ def a(x):
         return 0
 
 
-fileName = "images"
+fileName = "../images"
 
 fileNum = a(fileName)
 
 print(f"在目录'{fileName}'下有{fileNum}个文件")
 
 for i in range(fileNum):
-    image = open(f"images/img{i}.jpg", "rb").read()
+    image = open(f"../images/img{i}.jpg", "rb").read()
     result = ocr.classification(image)
     print(f"第{i + 1}个字为{result}")
